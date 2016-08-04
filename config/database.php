@@ -78,6 +78,7 @@ return [
         'mybuild' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',     // for user with id=1
+            'database'  => 'laravel',     // for user with id=1
             'username'  => 'root', // for user with id=1
             'password'  => '', // for user with id=1
             'charset'   => 'utf8',

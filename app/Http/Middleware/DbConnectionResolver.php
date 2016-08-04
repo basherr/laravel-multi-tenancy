@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Auth;
+use Config;
 use Closure;
 use App\User;
 use Orchestra\Support\Facades\Tenanti;
@@ -19,12 +20,13 @@ class DbConnectionResolver
     public function handle($request, Closure $next)
     {
         $sites = Auth::user()->sites;
+
         if(count($sites) > 1) {
             return 'Please choose from company';
         }
 
         Tenanti::driver('mu')->asDefaultConnection( $sites[0], 'mybuild_{id}');
-       
-        return $next($request);
+        
+        return $next($sites[0]->site_slug);
     }
 }

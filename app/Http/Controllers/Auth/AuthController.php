@@ -82,9 +82,12 @@ class AuthController extends Controller
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
             ]);
+            
             $site = Site::create([
-                'site_name' => $data['site_name']
+                'site_name' => $data['site_name'],
+                'site_slug' => slugify($data['site_name']),
             ]);
+
             $user->sites()->attach($site->id);
             
             event(new NewSiteWasRegistered($site));

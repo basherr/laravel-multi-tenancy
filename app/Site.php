@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Site extends Model
 {
-    protected $fillable = ['site_name', 'user_id'];
+    protected $connection = 'mysql';
+    protected $fillable = ['site_name', 'site_slug', 'user_id'];
 
     /**
      * Every site has one admin who creates it

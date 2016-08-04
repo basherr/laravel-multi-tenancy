@@ -16,9 +16,11 @@ class MuTenantCreatePostsTable extends Migration
      */
     public function up($id, Model $model)
     {
-        Schema::table("mu_{$id}_posts", function (Blueprint $table) {
+        Schema::create("posts", function (Blueprint $table) {
             $table->increments('id');
-            $table->string('post_name');
+            $table->string('post_title');
+            $table->string('post_content');
+            $table->string('post_type');
         });
     }
 
