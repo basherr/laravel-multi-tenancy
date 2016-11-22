@@ -20,13 +20,12 @@ class DbConnectionResolver
     public function handle($request, Closure $next)
     {
         $sites = Auth::user()->sites;
-
-        if(count($sites) > 1) {
-            return 'Please choose from company';
-        }
-
+        //Site[0] will be set as default
+        // if(count($sites) > 1) {
+        //     return 'Please choose from company';
+        // }
         Tenanti::driver('mu')->asDefaultConnection( $sites[0], 'mybuild_{id}');
         
-        return $next($sites[0]->site_slug);
+        return $next($request);
     }
 }
