@@ -65,16 +65,6 @@ return [
             'strict' => false,
             'engine' => null,
         ],
-        'tenants' => [
-            'driver'    => 'mysql',
-            'host'      => 'dbhost',     // for user with id=1
-            'username'  => 'dbusername', // for user with id=1
-            'password'  => 'dbpassword', // for user with id=1
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
-        ],
         'mybuild' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',     // for user with id=1

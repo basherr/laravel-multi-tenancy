@@ -25,12 +25,6 @@ return [
     */
 
     'drivers' => [
-        'user' => [
-            'model'  => App\User::class,
-            'migration' => 'tenant_migrations',
-            'path'   => database_path('tenanti/user'),
-            'shared' => false,
-        ],
         'mu' => [
             'model'  => App\Site::class,
             'migration' => 'tenant_migrations',
