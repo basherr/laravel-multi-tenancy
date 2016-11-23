@@ -1,6 +1,6 @@
 # Multi Tenant Database Laravel With Orchestra Package Implementation
 <h3>Note</h3>
-<p>Configuration Tenant Driver for Single Database will be relesed soon.</p>
+<p>If you are looking for Configuration Tenant Driver for Single Database, Please <a href="https://github.com/basherr/laravel-multi-tenancy-single-database">Click here.</a></p>
 <h2>Installation Instruction - Multi Database Connection Setup</h2>
 <p>Clone or Download the Repository to the htdocs / www folder.</p>
 <span>Update Composer by typing<code>Composer update</code> in the <code>command line</code> on the root directory of project.</span>
